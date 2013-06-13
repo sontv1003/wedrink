@@ -39,7 +39,7 @@ $tag = $wp_query->get_queried_object();
                                     <?php echo get_the_post_thumbnail($prd->ID, 'medium', array('title' => $prd->post_title)); ?>
                                 </div>
                                 <div class="description">
-                                    <p><a href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>
+                                    <p><a style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $tag->term_id); ?>;" href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>
                                 </div>
                             </li>
                         <?php } ?>
