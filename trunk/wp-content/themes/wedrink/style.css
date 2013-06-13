@@ -1465,7 +1465,7 @@ img#wpstats {
     .main-navigation li a {
         border-bottom: 0;
         color: #6a6a6a;
-        line-height: 3.692307692;
+        line-height: 60px;
         text-transform: uppercase;
         white-space: nowrap;
     }
@@ -1715,17 +1715,13 @@ img#wpstats {
 }
 /*BEGIN Q*/
 @font-face {
-    font-family: 'DolceCaffeRegular';
-    src: url('/css/dolcecaffe-regular-webfont.eot');
-    src: url('/css/dolcecaffe-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/css/dolcecaffe-regular-webfont.woff') format('woff'), url('/css/dolcecaffe-regular-webfont.ttf') format('truetype'), url('dolcecaffe-regular-webfont.svg#DolceCaffeRegular') format('svg');
+    font-family: 'tekon';
+    src: url('css/VNI-Tekon.eot');
+    src: url('css/VNI-Tekon.eot?#iefix') format('embedded-opentype'), 
+        url('css/VNI-Tekon.TTF') format('woff'), 
+        url('/css/VNI-Tekon.TTF') format('truetype'), 
+        url('VNI-Tekon.svg#DolceCaffeRegular') format('svg');
     font-weight: normal !important;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SuomiHandScript';
-    src: url('css/suomihand-script-webfont.eot');
-    src: url('css/suomihand-script-webfont.eot?#iefix') format('embedded-opentype'), url('css/suomihand-script-webfont.woff') format('woff'), url('suomihand-script-webfont.ttf') format('truetype'), url('css/suomihand-script-webfont.svg#SuomiHandScript') format('svg');
-    font-weight: normal;
     font-style: normal;
 }
 .fl{
@@ -1748,7 +1744,9 @@ ul#menu-header-menu .color_2{color: #13622B;}
 ul#menu-header-menu .color_3{color: #A349A4;}
 ul#menu-header-menu .color_4{color: #232B83;}
 ul#menu-header-menu li a{
-    font-size: 18px;
+    font-size: 25px;
+    font-family: 'tekon';
+    font-weight: 500;
 }
 ul.nav-l-menu li{
     /*display: inline-block;*/
@@ -1798,18 +1796,21 @@ div.homewedrink{
 }
 .home_title_line_1 {
     padding-top: 90px;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 25px;
     color: #880015;
 }
 .home_title_line_2 {
     padding-top: 20px;
     padding-bottom: 30px;
     color: #092F14;
-    font-size: 60px;
+    font-size: 90px;
+    font-weight: 500;
 }
 .home_title_line_3 {
     color: #000000;
-    font-size: 25px;
+    font-weight: bold;
+    font-size: 32px;
     padding-bottom: 50px;
 }
 .business{
@@ -1833,10 +1834,12 @@ div.homewedrink{
 .business_des span{
     color: #98060D;
     margin-left: 30px;
+    font-size: 25px !important;
+    
 }
 a .business_span, .business_des span{
     line-height: 24px;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 32px;
 }
 .linkprd.fl {
@@ -1907,12 +1910,13 @@ p.news-date, p.news-title{
 }
 .menu-products-menu-container ul li{
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .menu-products-menu-container ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 18px
+    font-size: 25px;
+    font-family: 'tekon';
 }
 #menu-products-menu .current_page_item,
 #menu-products-menu .current-menu-item{
@@ -1933,7 +1937,7 @@ p.xemnhieuhon a{
 }
 .page-middle h1{   
     font-size: 50px;
-    margin: 5px 0px;
+    margin: 5px 50px;
 }
 div.thumprd{
     width: 25%;
@@ -2028,4 +2032,8 @@ input.btorder:hover{
     margin: 10px;
     text-align: center;
 }
+.home_body p, .fo, input#sanpham{
+    font-family: 'tekon';
+}
+
 /*END Q*/

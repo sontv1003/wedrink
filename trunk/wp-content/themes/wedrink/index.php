@@ -23,11 +23,11 @@ get_header();
         <div class="business fl">
             <a href="<?php echo trim(get_custom('home_link_shops')); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/images/business.jpg" class="business_img fl"/>
-            <span class="business_span fl"><?php echo get_custom('home_welcome'); ?></span>
+            <span class="business_span fl fo"><?php echo get_custom('home_welcome'); ?></span>
             </a>
         </div>
         <div class="business_des fl">
-            <span class="fl"><?php echo get_custom('home_description'); ?></span>
+            <span class="fl fo"><?php echo get_custom('home_description'); ?></span>
         </div>
         <a href="<?php echo trim(get_custom('home_link _products')); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/images/cungthuongthuc.png" class="linkprd fl"/>
