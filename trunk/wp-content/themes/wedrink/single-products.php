@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
     $urlprd = $_POST['link'];
     $soluong = $_POST['soluong'];
     $thetich = $_POST['thetich'];
+    $diachi = $_POST['diachi'];
     $hoten = $_POST['hoten'];
     $dienthoai = $_POST['dienthoai'];
     $ghichu = $_POST['ghichu'];
@@ -20,7 +21,9 @@ if (isset($_POST['submit'])) {
         add_post_meta($postid, 'orders_link', $link);
         add_post_meta($postid, 'orders_soluong', $soluong);
         add_post_meta($postid, 'orders_thetich', $thetich);
+        add_post_meta($postid, 'orders_diachinhanhang', $diachi);
         add_post_meta($postid, 'orders_ghichu', $ghichu);
+        add_post_meta($postid, 'orders_anhsanpham', get_the_post_thumbnail($post->ID, array(100,100)));
         $mess = '<script type="text/javascript">alert("Chúng tôi đã nhận được yêu cầu và sẽ sớm liên hệ với bạn!");</script>';
     }else{
         $mess = '<script type="text/javascript">alert("Quá trình xử lý đã gặp lỗi, bạn hãy thử lại");</script>';
@@ -108,6 +111,10 @@ if(isset($_POST['submit'])){
                                 <tr>
                                     <td><label for="dienthoai"><?php _e('ĐIỆN THOẠI'); ?>*</td>
                                     <td><input id="dienthoai" name="dienthoai" type="text" value="<?php echo $dienthoai;?>" size="30" class="required"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="diachi"><?php _e('Đ/C NHẬN HÀNG'); ?>*</td>
+                                    <td><input id="diachi" name="diachi" type="text" value="<?php echo $diachi;?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="ghichu"><?php _e('GHI CHÚ'); ?></td>

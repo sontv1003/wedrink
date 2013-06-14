@@ -22,7 +22,8 @@ jQuery(document).ready(function(){
         var thetich = jQuery('#thetich').val();
         var hoten = jQuery('#hoten').val();
         var dienthoai = jQuery('#dienthoai').val();
-        if(sanpham=='' || soluong=='' || thetich=='' || hoten=='' || dienthoai==''){
+        var diachi = jQuery('#diachi').val();
+        if(sanpham=='' || soluong=='' || thetich=='' || hoten=='' || dienthoai=='' || diachi==''){
             jQuery('.message').html('BẠN CHƯA NHẬP ĐỦ THÔNG TIN');
             e.preventDefault();
         }

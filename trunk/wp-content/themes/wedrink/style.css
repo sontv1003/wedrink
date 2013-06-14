@@ -725,7 +725,8 @@ article.sticky .featured-post {
 .entry-content,
 .entry-summary,
 .mu_register {
-    line-height: 1.714285714;
+    line-height: 20px;
+    margin-top: 20px;
 }
 .entry-content h1,
 .comment-content h1,
@@ -1835,7 +1836,7 @@ div.homewedrink{
     color: #98060D;
     margin-left: 30px;
     font-size: 25px !important;
-    
+
 }
 a .business_span, .business_des span{
     line-height: 24px;
@@ -2035,5 +2036,10 @@ input.btorder:hover{
 .home_body p, .fo, input#sanpham{
     font-family: 'tekon';
 }
-
+.contact7 {
+    width: 330px;
+    padding: 10px 0px;
+    font-size: 13px;
+    margin: 0 auto;
+}
 /*END Q*/
