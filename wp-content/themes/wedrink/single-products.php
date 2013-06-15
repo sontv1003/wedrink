@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
     <?php while (have_posts()) : the_post(); ?>
         <div class="page-middle">
             <div style="height: 50px;"></div>
-            <h2 style="color: #fff; background: url('<?php echo get_field('wdrink_category_background', 'products_cat_' . $cat->term_id); ?>') no-repeat; width: 100px; height: 30px;line-height: 30px; clear: none;"><span class="fo"><?php echo $cat->name; ?></span></h2>
+            <h2 style="color: #fff; margin-left: 15px; background: url('<?php echo get_field('wdrink_category_background', 'products_cat_' . $cat->term_id); ?>') no-repeat; width: 100px; height: 30px;line-height: 30px; clear: none;"><span class="fo"><?php echo $cat->name; ?></span></h2>
             <h1 class="fo" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;"><?php the_title(); ?></h1>
             <div class="fl thumprd">
                 <?php echo get_the_post_thumbnail($post->ID, array(600, 600), array('title' => $post->post_title)); ?>
@@ -94,7 +94,7 @@ if(isset($_POST['submit'])){
                             <table>
                                 <tr>
                                     <td><label for="sanpham"><?php _e('TÊN SẢN PHẨM'); ?>*</label></td>
-                                    <td><input id="sanpham" name="sanpham" type="text" value="<?php echo $post->post_title; ?>" size="52"></td>
+                                    <td><input id="sanpham" name="sanpham" type="text" value="<?php echo $post->post_title; ?>" size="43"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="soluong"><?php _e('SỐ LƯỢNG'); ?>*</label></td>
