@@ -1855,7 +1855,7 @@ div.page-content{
 }
 div.page-content div.page-middle{
     margin: 0 auto;
-    width: 980px;
+    width: 70%;
     background: #fff;
     min-height: 600px;
 }
@@ -1863,14 +1863,14 @@ div.page-content div.page-middle{
     margin-bottom: -24px;
 }
 .page-left {
-    width: 138px;
+    width: 16%;
     min-height: 200px;
     margin-top: 70px;
     padding-left: 15px;
     color: #7F7F7F;
 }
 .page-left-news {
-    width: 250px;
+    width: 16%;
     min-height: 200px;
     padding:10px;
     color: #fff;
@@ -1878,7 +1878,7 @@ div.page-content div.page-middle{
     min-height: 700px;
 }
 .page-middle-news{
-    width: 1000px;
+    width: 81%;
     height: 700px;
     text-align: justify;
     border-top: 1px solid #AAA;
@@ -1947,7 +1947,7 @@ div.thumprd{
     width: 25%;
 }
 div.infoprd{
-    width: 74%;
+    width: 70%;
 }
 p{
     text-align: justify;
@@ -1965,7 +1965,7 @@ p{
     margin: 50px 0px;
 }
 input.btorder {
-    padding: 5px 100px;
+    padding: 5px 80px;
     border-radius: 2px;
     background: #FF7F27;
     font-size: 20px;
@@ -1979,7 +1979,7 @@ input.btorder:hover{
     width: 50%;
 }
 .orderright {
-    width: 50%;
+    width: 54%;
     font-size: 15px;
 }
 .orderhotline_t{
