@@ -2059,7 +2059,7 @@ input.btorder:hover{
     font-size: 13px;
     margin: 0 auto;
 }
-.page-middle img.size-full{
+.page-middle img.size-full, .page-middle img.aligncenter{
     width: 95%;
 }
 #thetich0 {
