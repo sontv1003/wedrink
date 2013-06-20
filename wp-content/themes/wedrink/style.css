@@ -1930,6 +1930,9 @@ p.news-date, p.news-title{
 p.xemnhieuhon a{
     color: #A349A4;
     text-decoration: none;
+	font-family: 'tekon';
+	font-weight: bold;
+	font-size: 18px;
 }
 .page-middle h1,
 .page-middle h2,
