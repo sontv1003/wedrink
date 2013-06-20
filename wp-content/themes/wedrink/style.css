@@ -2003,9 +2003,23 @@ input.btorder:hover{
 .aaa{
     margin: 20px 0px;
 }
+.wrappop{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    opacity: 0.85;
+}
 .popupprd{
+    margin: 0 auto;
     position: fixed;
     top: 100px;
+    left: 50%;
+    margin-left: -200px;
     width: 400px;
     height: 300px;
     border: 5px solid #aaa;
@@ -2044,5 +2058,15 @@ input.btorder:hover{
     padding: 10px 0px;
     font-size: 13px;
     margin: 0 auto;
+}
+.page-middle img.size-full{
+    width: 95%;
+}
+#thetich0 {
+    margin: 5px 0px;
+    padding: 5px 0px 5px 5px;
+    width: 100px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
 }
 /*END Q*/

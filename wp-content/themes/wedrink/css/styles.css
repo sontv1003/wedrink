@@ -938,7 +938,7 @@ li.selected a {
 }
 #juices-list .grid li.product .description,
 #related-products .grid li.product .description {
-  margin: 0 50px;
+  margin: 0 40px;
 }
 #related-products h2 {
   position: absolute;
