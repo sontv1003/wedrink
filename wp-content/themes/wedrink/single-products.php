@@ -172,12 +172,12 @@ if (isset($_POST['submit'])) {
             $prds = get_posts($args);
             ?>
             <aside id="related-products">
-                <h2><span class="fo"><?php _e('Saûn phaåm lieân quan'); ?></span></h2>
+                <h2><span class="fo"><?php _e('Sản phẩm liên quan'); ?></span></h2>
                 <ul class="grid">
                     <?php foreach ($prds as $prd) { ?>
                         <li class="product">
                             <div class="thumb">
-                                <?php echo get_the_post_thumbnail($prd->ID, 'medium', array('title' => $prd->post_title)); ?>
+                                <a href="<?php echo get_permalink($prd->ID); ?>"><?php echo get_the_post_thumbnail($prd->ID, 'medium', array('title' => $prd->post_title)); ?></a>
                             </div>
                             <div class="description">
                                 <p><a href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>

@@ -1739,8 +1739,8 @@ img#wpstats {
 }
 a.logo{
     position: absolute;
-    top:20px;
-    left: 5px;
+    top: 0px;
+    left: -70px;
 }
 ul#menu-header-menu .color_0{color: #880015;}
 ul#menu-header-menu .color_1{color: #ED1C24;}
