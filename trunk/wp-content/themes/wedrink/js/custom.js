@@ -9,11 +9,13 @@ jQuery(document).ready(function(){
     
     
     jQuery('#btorder').click(function(){
+        jQuery('.wrappop').show();
         jQuery('.popupprd').show();
         jQuery('#soluong').val(jQuery('#soluong0').val());
         jQuery('#thetich').val(jQuery('#thetich0').val());
     });
     jQuery('.close').click(function(){
+        jQuery('.wrappop').hide();
         jQuery('.popupprd').hide();
     });
     jQuery('#ordersubmit').click(function(e){

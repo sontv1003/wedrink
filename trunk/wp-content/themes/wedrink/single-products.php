@@ -17,15 +17,15 @@ if (isset($_POST['submit'])) {
         'post_content' => $cten
     );
     $postid = wp_insert_post($defaults);
-    if($postid){
+    if ($postid) {
         add_post_meta($postid, 'orders_link', $link);
         add_post_meta($postid, 'orders_soluong', $soluong);
         add_post_meta($postid, 'orders_thetich', $thetich);
         add_post_meta($postid, 'orders_diachinhanhang', $diachi);
         add_post_meta($postid, 'orders_ghichu', $ghichu);
-        add_post_meta($postid, 'orders_anhsanpham', get_the_post_thumbnail($post->ID, array(100,100)));
+        add_post_meta($postid, 'orders_anhsanpham', get_the_post_thumbnail($post->ID, array(100, 100)));
         $mess = '<script type="text/javascript">alert("Chúng tôi đã nhận được yêu cầu và sẽ sớm liên hệ với bạn!");</script>';
-    }else{
+    } else {
         $mess = '<script type="text/javascript">alert("Quá trình xử lý đã gặp lỗi, bạn hãy thử lại");</script>';
     }
 }
@@ -43,7 +43,7 @@ $cat = $tags[0];
 $index = rand(0, count($tags) - 1);
 $tag = $tags[$index];
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     echo $mess;
 }
 ?>
@@ -66,14 +66,22 @@ if(isset($_POST['submit'])){
                     <?php the_excerpt(); ?>
                 </div>
                 <div class="orderprd">
-                    <table>
+                    <table >
                         <tr>
                             <td><label for="soluong0"><?php _e('SỐ LƯỢNG'); ?></label></td>
-                            <td><input id="soluong0" name="soluong0" type="text" value="<?php echo $soluong;?>" size="10"></td>
+                            <td><input id="soluong0" name="soluong0" type="text" value="<?php echo $soluong; ?>" size="10"></td>
                         </tr>
                         <tr>
                             <td><label for="thetich0"><?php _e('THỂ TÍCH'); ?></td>
-                            <td><input id="thetich0" name="thetich0" type="text" value="<?php echo $thetich;?>" size="10"></td>
+                            <td>
+                                <select name="thetich0" id="thetich0" >
+                                    <option value="0.25 Lit">0.25 Lít</option>
+                                    <option value="0.5 Lit">0.5 Lít</option>
+                                    <option value="1 Lit">1 Lít</option>
+                                    <option value="1.5 Lit">1.5 Lít</option>
+
+                                </select>
+                            </td>
                         </tr>
                     </table>
                     <div class="aaa">
@@ -85,6 +93,9 @@ if(isset($_POST['submit'])){
                                 <a href="<?php echo get_custom('product_shipping_detail'); ?>" class="orderright_link"><?php _e('Xem chi tiết vận chuyển'); ?></a>
                             </p>
                         </div>
+                    </div>
+
+                    <div class="wrappop">
                     </div>
                     <div class="popupprd">
                         <span class="close fr">X</span>
@@ -98,27 +109,27 @@ if(isset($_POST['submit'])){
                                 </tr>
                                 <tr>
                                     <td><label for="soluong"><?php _e('SỐ LƯỢNG'); ?>*</label></td>
-                                    <td><input id="soluong" name="soluong" type="text" value="<?php echo $soluong;?>" size="30" class="required"></td>
+                                    <td><input id="soluong" name="soluong" type="text" value="<?php echo $soluong; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="thetich"><?php _e('THỂ TÍCH'); ?>*</label></td>
-                                    <td><input id="thetich" name="thetich" type="text" value="<?php echo $thetich;?>" size="30" class="required"></td>
+                                    <td><input id="thetich" name="thetich" type="text" value="<?php echo $thetich; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="hoten"><?php _e('HỌ TÊN'); ?>*</label></td>
-                                    <td><input id="hoten" name="hoten" type="text" value="<?php echo $hoten;?>" size="30" class="required"></td>
+                                    <td><input id="hoten" name="hoten" type="text" value="<?php echo $hoten; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="dienthoai"><?php _e('ĐIỆN THOẠI'); ?>*</td>
-                                    <td><input id="dienthoai" name="dienthoai" type="text" value="<?php echo $dienthoai;?>" size="30" class="required"></td>
+                                    <td><input id="dienthoai" name="dienthoai" type="text" value="<?php echo $dienthoai; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="diachi"><?php _e('Đ/C NHẬN HÀNG'); ?>*</td>
-                                    <td><input id="diachi" name="diachi" type="text" value="<?php echo $diachi;?>" size="30" class="required"></td>
+                                    <td><input id="diachi" name="diachi" type="text" value="<?php echo $diachi; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="ghichu"><?php _e('GHI CHÚ'); ?></td>
-                                    <td><textarea cols="26" name="ghichu" id="ghichu"><?php echo $ghichu;?></textarea></td>
+                                    <td><textarea cols="26" name="ghichu" id="ghichu"><?php echo $ghichu; ?></textarea></td>
                                 </tr>
                                 <tr>
                                     <td></td>
@@ -128,6 +139,7 @@ if(isset($_POST['submit'])){
                             <p class="message"></p>
                         </form>
                     </div>
+
                 </div>
                 <div class="socialprd">
                     <?php echo do_shortcode('[social_share]') ?>
