@@ -54,7 +54,7 @@ function QQ_product() {
             'edit_item' => 'Sửa'
         ),
         'rewrite' => array(
-            'slug'=> 'san-pham'
+            'slug'=> 'danh-muc'
         )
     ));
     register_taxonomy('products_effects', 'products', array(
