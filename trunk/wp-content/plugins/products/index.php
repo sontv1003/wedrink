@@ -39,6 +39,9 @@ function QQ_product() {
             'edit_item' => __("Edit")),
         'public' => true,
         'show_ui' => true,
+        'rewrite' => array(
+            'slug'=> 'san-pham'
+        ),
         'hierarchical' => true,
         'supports' => array('title', 'comments', 'editor', 'author', 'excerpt', 'thumbnail', 'custom-fields', 'trackbacks', 'revisions', 'page-attributes', 'post-formats'),)
     );
@@ -47,8 +50,22 @@ function QQ_product() {
         'hierarchical' => true,
         'labels' => array(
             'name' => 'Category',
-            'add_new_item' => 'Add  New',
-            'edit_item' => 'Edit'
+            'add_new_item' => 'Thêm mới',
+            'edit_item' => 'Sửa'
+        ),
+        'rewrite' => array(
+            'slug'=> 'san-pham'
+        )
+    ));
+    register_taxonomy('products_effects', 'products', array(
+        'hierarchical' => true,
+        'labels' => array(
+            'name' => 'Tác dụng',
+            'add_new_item' => 'Thêm mới',
+            'edit_item' => 'Sửa'
+        ),
+        'rewrite' => array(
+            'slug'=> 'tac-dung'
         )
     ));
 }

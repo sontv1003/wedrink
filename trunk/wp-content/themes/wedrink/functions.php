@@ -457,6 +457,7 @@ if (!function_exists('wedrink_comment')) :
         'Menu-Bottom-Left-1' => 'Bottom Menu Left 1',
         'Menu-Bottom-Left-2' => 'Bottom Menu Left 2',
         'Menu-Bottom-Left-3' => 'Bottom Menu Left 3',
-        'Menu-Bottom-Right' => 'Bottom Menu Right'
+        'Menu-Bottom-Right' => 'Bottom Menu Right',
+        'Menu-Left' => 'Menu Left'
     ));
     /*QQ ADD*/
