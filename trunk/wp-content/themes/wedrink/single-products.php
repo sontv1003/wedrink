@@ -101,34 +101,35 @@ if (isset($_POST['submit'])) {
                         <span class="close fr">X</span>
                         <div class="clr"></div>
                         <form id="frmorder" name="frmorder" action="" method="post" >
-                            <input type="hidden" name="link" value="<?php echo get_permalink($post->ID); ?>" />
-                            <table>
+                            <input type="hidden" name="link" value="<?php echo get_permalink($post->ID); ?>" />							
+							<p class="message"></p>
+                            <table style="margin-top: 15px;">
                                 <tr>
-                                    <td><label for="sanpham"><?php _e('TÊN SẢN PHẨM'); ?>*</label></td>
+                                    <td><label for="sanpham"><?php _e('Tên sản phẩm'); ?>&nbsp;<span class="sp_error">*</span></label></td>
                                     <td><input id="sanpham" name="sanpham" type="text" value="<?php echo $post->post_title; ?>" size="43"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="soluong"><?php _e('SỐ LƯỢNG'); ?>*</label></td>
+                                    <td><label for="soluong"><?php _e('Số lượng'); ?>&nbsp;<span class="sp_error">*</span></label></td>
                                     <td><input id="soluong" name="soluong" type="text" value="<?php echo $soluong; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="thetich"><?php _e('THỂ TÍCH'); ?>*</label></td>
+                                    <td><label for="thetich"><?php _e('Thể tích'); ?>&nbsp;<span class="sp_error">*</span></label></td>
                                     <td><input id="thetich" name="thetich" type="text" value="<?php echo $thetich; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="hoten"><?php _e('HỌ TÊN'); ?>*</label></td>
+                                    <td><label for="hoten"><?php _e('Họ và tên'); ?>&nbsp;<span class="sp_error">*</span></label></td>
                                     <td><input id="hoten" name="hoten" type="text" value="<?php echo $hoten; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="dienthoai"><?php _e('ĐIỆN THOẠI'); ?>*</td>
+                                    <td><label for="dienthoai"><?php _e('Điện thoại'); ?>&nbsp;<span class="sp_error">*</span></span></td>
                                     <td><input id="dienthoai" name="dienthoai" type="text" value="<?php echo $dienthoai; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="diachi"><?php _e('Đ/C NHẬN HÀNG'); ?>*</td>
+                                    <td><label for="diachi"><?php _e('Đ/c nhận hàng'); ?>&nbsp;<span class="sp_error">*</span></td>
                                     <td><input id="diachi" name="diachi" type="text" value="<?php echo $diachi; ?>" size="30" class="required"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="ghichu"><?php _e('GHI CHÚ'); ?></td>
+                                    <td><label for="ghichu"><?php _e('Ghi chú'); ?></td>
                                     <td><textarea cols="26" name="ghichu" id="ghichu"><?php echo $ghichu; ?></textarea></td>
                                 </tr>
                                 <tr>
@@ -136,7 +137,7 @@ if (isset($_POST['submit'])) {
                                     <td><input id="ordersubmit" type="submit" name="submit" value="<?php _e('GỬI THÔNG TIN'); ?>"/></td>
                                 </tr>
                             </table>
-                            <p class="message"></p>
+
                         </form>
                     </div>
 
