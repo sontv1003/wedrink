@@ -65,6 +65,9 @@ if (isset($_POST['submit'])) {
                 <div class="descriptionprd">
                     <?php the_excerpt(); ?>
                 </div>
+                <div class="singleprice" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;">
+                    <?php echo get_field('product_gia', $post->ID);?>
+                </div>
                 <div class="orderprd">
                     <table >
                         <tr>
