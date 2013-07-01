@@ -31,7 +31,7 @@ get_header();
                 <?php foreach ($tax_terms as $item): ?>
                     <?php $count--; ?>
                     <div class="<?php echo $item->slug; ?>">
-                        <h2 style="background: url('<?php echo get_field('wdrink_category_background', 'products_cat_' . $item->term_id); ?>') no-repeat; width: 100px; height: 30px;line-height: 30px;"><span><?php echo $item->name;?></span></h2>
+                        <h2 style="background: url('<?php echo get_field('wdrink_category_background', 'products_cat_' . $item->term_id); ?>') no-repeat; width: 100px; height: 30px;line-height: 30px;"><span><?php echo $item->name; ?></span></h2>
                         <ul class="grid">
                             <?php
                             $args = array(
@@ -47,19 +47,26 @@ get_header();
                             <?php foreach ($prds as $prd) { ?>
                                 <li class="product">
                                     <div class="thumb">
-                                        <a href="<?php echo get_permalink($prd->ID);?>"><?php echo get_the_post_thumbnail( $prd->ID, 'medium', array('title'=>$prd->post_title) ); ?></a>
+                                        <a href="<?php echo get_permalink($prd->ID); ?>"><?php echo get_the_post_thumbnail($prd->ID, 'medium', array('title' => $prd->post_title)); ?></a>
                                     </div>
                                     <div class="description">
-                                        <p><a style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;" href="<?php echo get_permalink($prd->ID);?>"><?php echo $prd->post_title; ?></a></p>
+                                        <p><a style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;" href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>
+                                    </div>
+                                    <div class="description">
+                                        <p class="price" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;"><?php
+                        if (get_field('product_gia', $prd->ID) != '') {
+                            echo get_field('product_gia', $prd->ID);
+                        }
+                        ?></p>
                                     </div>
                                 </li>
-                            <?php } ?>
-                            <?php wp_reset_query(); ?>
+    <?php } ?>
+    <?php wp_reset_query(); ?>
                         </ul>
                     </div>
                     <p class="xemnhieuhon" style="text-align: right;height: 30px;">
                         <a href="<?php echo get_term_link($item->slug, 'products_cat'); ?>">
-                            <?php _e('Xem nhiều hơn'); ?>
+    <?php _e('Xem nhiều hơn'); ?>
                         </a>
                     </p>
                     <div class="clr"></div>
@@ -68,8 +75,8 @@ get_header();
                         ;
                         ?>
                         <div class="hr"></div>
-                    <?php } ?>
-                <?php endforeach; ?>
+    <?php } ?>
+<?php endforeach; ?>
             </section>
         </article>
     </div>

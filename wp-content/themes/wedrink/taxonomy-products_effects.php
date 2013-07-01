@@ -68,6 +68,9 @@ $tag = $wp_query->get_queried_object();
                                     <div class="description">
                                         <p><a style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;" href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>
                                     </div>
+                                    <div class="description">
+                                        <p class="price" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;"><?php  if( get_field('product_gia', $prd->ID)!='' ) {echo get_field('product_gia', $prd->ID);} ?></p>
+                                    </div>
                                 </li>
                             <?php } ?>
                             <?php wp_reset_query(); ?>

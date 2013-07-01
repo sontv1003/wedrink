@@ -741,6 +741,7 @@ article.sticky .featured-post {
 .mu_register {
     line-height: 20px;
     margin-top: 20px;
+    padding-bottom: 40px;
 }
 .entry-content h1,
 .comment-content h1,
@@ -1421,7 +1422,22 @@ img#wpstats {
 -------------------------------------------------------------- */
 
 /* Minimum width of 600 pixels. */
+@media screen and (min-width: 480px) {
+        ul.nav-l-menu li {
+        margin-right: 15px !important;
+    }
+    .footer_fb_icon{
+        display: none;
+    }
+    ul.nav-r-menu li a{
+        line-height: 0px !important;
+    }
+    .menu-products-menu-container ul li{
+        margin-top: 20px !important;
+    }
+}
 @media screen and (min-width: 600px) {
+
     .author-avatar {
         float: left;
         margin-top: 8px;
@@ -1433,8 +1449,6 @@ img#wpstats {
     }
     .site {
         margin: 0 auto;
-        /*        max-width: 960px;
-                max-width: 68.571428571rem;*/
         overflow: hidden;
     }
     .site-content {
@@ -1444,7 +1458,7 @@ img#wpstats {
     body.template-front-page .site-content,
     body.single-attachment .site-content,
     body.full-width .site-content {
-        width: 100%;
+        /*width: 100%;*/
     }
     .widget-area {
         float: right;
@@ -1462,12 +1476,9 @@ img#wpstats {
     }
     .main-navigation ul.nav-menu,
     .main-navigation div.nav-menu > ul {
-        /*		border-bottom: 1px solid #ededed;
-                        border-top: 1px solid #ededed;*/
         display: inline-block !important;
         text-align: left;
         margin-left: 75px;
-        /*width: 100%;*/
     }
     .main-navigation ul {
         margin: 0;
@@ -2103,4 +2114,16 @@ input.btorder:hover{
 }
 .mnl li a:hover{
     color: #21759b;
+}
+div.description p.price{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+div.description p{
+    text-align: center;
+}
+div.singleprice{
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-size: 30px;
 }
