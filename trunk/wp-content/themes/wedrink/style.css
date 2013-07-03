@@ -498,12 +498,13 @@ html {
 body {
     font-size: 14px;
     font-size: 1rem;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: myriad pro;
     text-rendering: optimizeLegibility;
     color: #444;
 }
 body.custom-font-enabled {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: "myriad pro";
+	font-size:12px;
 }
 a {
     outline: none;
@@ -1427,7 +1428,7 @@ img#wpstats {
         margin-right: 15px !important;
     }
     .footer_fb_icon{
-        display: none;
+      
     }
     ul.nav-r-menu li a{
         line-height: 0px !important;
@@ -1782,6 +1783,7 @@ ul.nav-r-menu li a{
 }
 ul.nav-r-menu{
     margin-left: 10px;
+    margin-right: 15px;
 }
 .footer_fb_icon {
     margin-top: -13px;
@@ -1967,6 +1969,9 @@ div.infoprd{
 }
 p{
     text-align: justify;
+    font-family: myriad pro;
+    line-height: 18px;
+    font-size:12px;
 }
 #tabs-1, #tabs-2 {
     border: 1px solid #AAA;
@@ -2107,8 +2112,8 @@ input.btorder:hover{
     color: #ff0000;
 }
 .mnl li a{
-    line-height: 15px;
-    font-size: 10px;
+    line-height: 19px;
+    font-size: 12px;
     color: #7F7F7F;
     text-decoration: none;
 }
