@@ -1783,7 +1783,7 @@ ul.nav-r-menu li a{
 }
 ul.nav-r-menu{
     margin-left: 10px;
-    margin-right: 15px;
+	margin-right: 15px;
 }
 .footer_fb_icon {
     margin-top: -13px;
@@ -1969,9 +1969,9 @@ div.infoprd{
 }
 p{
     text-align: justify;
-    font-family: myriad pro;
-    line-height: 18px;
-    font-size:12px;
+	font-family: myriad pro;
+	line-height: 18px;
+	font-size:12px;
 }
 #tabs-1, #tabs-2 {
     border: 1px solid #AAA;
