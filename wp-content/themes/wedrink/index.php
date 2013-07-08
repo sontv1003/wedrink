@@ -35,4 +35,7 @@ get_header();
         <div class="clr"></div>
     </div>
 </div>
+
+
+
 <?php get_footer(); ?>
