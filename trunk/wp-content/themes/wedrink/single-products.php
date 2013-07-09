@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
     $urlprd = $_POST['link'];
     $soluong = $_POST['soluong'];
     $thetich = $_POST['thetich'];
+    $thanhtien = $_POST['thanhtien'];
     $diachi = $_POST['diachi'];
     $hoten = $_POST['hoten'];
     $dienthoai = $_POST['dienthoai'];
@@ -21,6 +22,7 @@ if (isset($_POST['submit'])) {
         add_post_meta($postid, 'orders_link', $link);
         add_post_meta($postid, 'orders_soluong', $soluong);
         add_post_meta($postid, 'orders_thetich', $thetich);
+        add_post_meta($postid, 'orders_thanhtien', $thanhtien);
         add_post_meta($postid, 'orders_diachinhanhang', $diachi);
         add_post_meta($postid, 'orders_ghichu', $ghichu);
         add_post_meta($postid, 'orders_anhsanpham', get_the_post_thumbnail($post->ID, array(100, 100)));
@@ -66,7 +68,9 @@ if (isset($_POST['submit'])) {
                     <?php the_excerpt(); ?>
                 </div>
                 <div class="singleprice" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;">
-                    <?php echo get_field('product_gia', $post->ID); ?>
+                    <p><?php if(get_field('product_gia_300', $post->ID)) echo 'Loại 300ml Giá '.  number_format(get_field('product_gia_300', $post->ID)).get_custom('product_unit'); ?></p>
+                    <p><?php if(get_field('product_gia_500', $post->ID)) echo 'Loại 500ml Giá '.number_format(get_field('product_gia_500', $post->ID)).get_custom('product_unit'); ?></p>
+                    <p><?php if(get_field('product_gia_1', $post->ID)) echo 'Loại 1L Giá '.number_format(get_field('product_gia_1', $post->ID)).get_custom('product_unit'); ?></p>
                 </div>
                 <div class="orderprd">
                     <table >
@@ -78,10 +82,9 @@ if (isset($_POST['submit'])) {
                             <td><label for="thetich0"><?php _e('THỂ TÍCH'); ?></td>
                             <td>
                                 <select name="thetich0" id="thetich0" >
-                                    <option value="0.25 Lit">0.25 Lít</option>
-                                    <option value="0.5 Lit">0.5 Lít</option>
-                                    <option value="1 Lit">1 Lít</option>
-                                    <option value="1.5 Lit">1.5 Lít</option>
+                                    <option value="300ml">300 ml</option>
+                                    <option value="500ml">500 ml</option>
+                                    <option value="1L">1 Lít</option>
 
                                 </select>
                             </td>
@@ -105,6 +108,11 @@ if (isset($_POST['submit'])) {
                         <div class="clr"></div>
                         <form id="frmorder" name="frmorder" action="" method="post" >
                             <input type="hidden" name="link" value="<?php echo get_permalink($post->ID); ?>" />							
+                            <input type="hidden" name="price300" id="price300" value="<?php echo get_field('product_gia_300', $post->ID); ?>" />							
+                            <input type="hidden" name="price500" id="price500" value="<?php echo get_field('product_gia_500', $post->ID); ?>" />							
+                            <input type="hidden" name="price1" id="price1" value="<?php echo get_field('product_gia_1', $post->ID); ?>" />							
+                            <input type="hidden" name="priceunit" id="priceunit" value="<?php echo get_custom('product_unit'); ?>" />							
+                            <input type="hidden" name="thanhtien" id="thanhtien" value="" />							
                             <p class="message"></p>
                             <table style="margin-top: 15px;">
                                 <tr>
@@ -117,7 +125,13 @@ if (isset($_POST['submit'])) {
                                 </tr>
                                 <tr>
                                     <td><label for="thetich"><?php _e('Thể tích'); ?>&nbsp;<span class="sp_error">*</span></label></td>
-                                    <td><input id="thetich" name="thetich" type="text" value="<?php echo $thetich; ?>" size="30" class="required"></td>
+                                    <td><input id="thetich" name="thetich" type="hidden" value="<?php echo $thetich; ?>" size="30" class="required">
+                                        <p class="thetichface"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="thetich"><?php _e('Thành tiền'); ?>&nbsp;<span class="sp_error"></span></label></td>
+                                    <td><p class="thanhtien">100,000đ</p></td>
                                 </tr>
                                 <tr>
                                     <td><label for="hoten"><?php _e('Họ và tên'); ?>&nbsp;<span class="sp_error">*</span></label></td>
