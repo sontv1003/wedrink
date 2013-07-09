@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
                     <?php the_excerpt(); ?>
                 </div>
                 <div class="singleprice" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;">
-                    <?php echo get_field('product_gia', $post->ID);?>
+                    <?php echo get_field('product_gia', $post->ID); ?>
                 </div>
                 <div class="orderprd">
                     <table >
@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
                         <div class="clr"></div>
                         <form id="frmorder" name="frmorder" action="" method="post" >
                             <input type="hidden" name="link" value="<?php echo get_permalink($post->ID); ?>" />							
-							<p class="message"></p>
+                            <p class="message"></p>
                             <table style="margin-top: 15px;">
                                 <tr>
                                     <td><label for="sanpham"><?php _e('Tên sản phẩm'); ?>&nbsp;<span class="sp_error">*</span></label></td>
@@ -157,7 +157,19 @@ if (isset($_POST['submit'])) {
                         <?php the_content(); ?>
                     </div>
                     <div id="tabs-2">
-                        <?php comments_template('', true); ?>
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id))
+                                    return;
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=542409615782070";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+
+                        <fb:comments href="<?php echo get_permalink(); ?>" width="550" num_posts="10"></fb:comments>
+    <?php //comments_template('', true);  ?>
                     </div>
                 </div>
             </div>
@@ -172,13 +184,13 @@ if (isset($_POST['submit'])) {
                         'taxonomy' => 'products_cat',
                         'field' => 'id',
                         'terms' => $tag->term_id
-                )));
+            )));
             $prds = get_posts($args);
             ?>
             <aside id="related-products">
                 <h2><span class="fo"><?php _e('Sản phẩm liên quan'); ?></span></h2>
                 <ul class="grid">
-                    <?php foreach ($prds as $prd) { ?>
+    <?php foreach ($prds as $prd) { ?>
                         <li class="product">
                             <div class="thumb">
                                 <a href="<?php echo get_permalink($prd->ID); ?>"><?php echo get_the_post_thumbnail($prd->ID, 'medium', array('title' => $prd->post_title)); ?></a>
@@ -187,12 +199,12 @@ if (isset($_POST['submit'])) {
                                 <p><a href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>
                             </div>
                         </li>
-                    <?php } ?>
-                    <?php wp_reset_query(); ?>
+    <?php } ?>
+    <?php wp_reset_query(); ?>
                 </ul>
             </aside>
         </div>
-    <?php endwhile; // end of the loop. ?>
+<?php endwhile; // end of the loop.  ?>
 </div>
 
 
