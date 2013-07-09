@@ -6,28 +6,27 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-
-get_header(); ?>
-
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', get_post_format() ); ?>
-
-				<nav class="nav-single">
-					<h3 class="assistive-text"><?php _e( 'Post navigation', 'wedrink' ); ?></h3>
-					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wedrink' ) . '</span> %title' ); ?></span>
-					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wedrink' ) . '</span>' ); ?></span>
-				</nav><!-- .nav-single -->
-
-				<?php comments_template( '', true ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+get_header();
+?>
+<div id="pagewrap-news" class="page-content-news">
+    <?php while (have_posts()) : the_post(); ?>
+        <div class="page-left-news fl single" style="background: <?php the_field('tintuc_sukien_maunen'); ?>;">
+            <p class="news-date"><?php _e('Ngày'); ?> <?php the_date(); ?></p>
+            <p class="news-title"><?php the_title(); ?></p>
+            <div class="news-content">
+                <?php the_content(); ?>
+            </div>
+        </div>
+        <?php
+        $img = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+        $url = $img[0];
+        ?>
+        <div class="page-middle-news fl single" style="background: #fff url('<?php echo $url; ?>') no-repeat; background-position: center;">
+            <?php // echo get_the_post_thumbnail($post->ID, 'full');
+            ?>
+        </div>
+        <div class="clr"></div>
+    <?php endwhile; // end of the loop.   ?>
+</div><!-- #primary -->
+<div class="clr"></div>
 <?php get_footer(); ?>

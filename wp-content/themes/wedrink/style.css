@@ -2132,3 +2132,12 @@ div.singleprice{
     margin: 10px 0px;
     font-size: 30px;
 }
+.news-title a{
+    text-decoration: none;
+}
+.page-left-news.fl.single{
+    width: 48.5%;
+}
+.page-middle-news.fl.single{
+    width: 48%;
+}
