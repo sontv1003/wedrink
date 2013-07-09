@@ -9,9 +9,9 @@
 ?>
 <div class="page-left-news fl" style="background: <?php the_field('tintuc_sukien_maunen'); ?>;">
     <p class="news-date"><?php _e('Ngày'); ?> <?php the_date(); ?></p>
-    <p class="news-title"><?php the_title(); ?></p>
+    <p class="news-title"><a href="<?php echo get_permalink($post_ID);?>"><?php the_title(); ?></a></p>
     <div class="news-content">
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
     </div>
 </div>
 <?php
