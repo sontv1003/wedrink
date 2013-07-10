@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
         var tt = jQuery('#thetich0').val();
         var u = jQuery('#priceunit').val();
         var t=0;
-        if(tt=='300ml'){
+        if(tt=='350ml'){
             t = parseFloat(jQuery('#price300').val());
         }else if(tt=='500ml'){
             t = parseFloat(jQuery('#price500').val());
@@ -42,7 +42,7 @@ jQuery(document).ready(function(){
         var tt = jQuery('#thetich0').val();
         var u = jQuery('#priceunit').val();
         var t=0;
-        if(tt=='300ml'){
+        if(tt=='350ml'){
             t = parseFloat(jQuery('#price300').val());
         }else if(tt=='500ml'){
             t = parseFloat(jQuery('#price500').val());

@@ -82,7 +82,7 @@ if (isset($_POST['submit'])) {
                             <td><label for="thetich0"><?php _e('THỂ TÍCH'); ?></td>
                             <td>
                                 <select name="thetich0" id="thetich0" >
-                                    <option value="300ml">300 ml</option>
+                                    <option value="350ml">350 ml</option>
                                     <option value="500ml">500 ml</option>
                                     <option value="1L">1 Lít</option>
 
