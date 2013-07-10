@@ -68,9 +68,9 @@ if (isset($_POST['submit'])) {
                     <?php the_excerpt(); ?>
                 </div>
                 <div class="singleprice" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;">
-                    <p><?php if(get_field('product_gia_300', $post->ID)) echo 'Loại 300ml Giá '.  number_format(get_field('product_gia_300', $post->ID)).get_custom('product_unit'); ?></p>
-                    <p><?php if(get_field('product_gia_500', $post->ID)) echo 'Loại 500ml Giá '.number_format(get_field('product_gia_500', $post->ID)).get_custom('product_unit'); ?></p>
-                    <p><?php if(get_field('product_gia_1', $post->ID)) echo 'Loại 1L Giá '.number_format(get_field('product_gia_1', $post->ID)).get_custom('product_unit'); ?></p>
+                    <p><?php if(get_field('product_gia_300', $post->ID)!='') echo 'Loại 350ml Giá '.  number_format(get_field('product_gia_300', $post->ID)).get_custom('product_unit'); ?></p>
+                    <p><?php if(get_field('product_gia_500', $post->ID)!='') echo 'Loại 500ml Giá '.number_format(get_field('product_gia_500', $post->ID)).get_custom('product_unit'); ?></p>
+                    <p><?php if(get_field('product_gia_1', $post->ID)!='') echo 'Loại 1L Giá '.number_format(get_field('product_gia_1', $post->ID)).get_custom('product_unit'); ?></p>
                 </div>
                 <div class="orderprd">
                     <table >
