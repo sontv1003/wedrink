@@ -54,8 +54,8 @@ get_header();
                                     </div>
                                     <div class="description">
                                         <p class="price" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;"><?php
-                        if (get_field('product_gia_300', $prd->ID) != '') {
-                            echo number_format(get_field('product_gia_300', $prd->ID)).get_custom('product_unit');
+                        if (get_field('product_gia_500', $prd->ID) != '') {
+                            echo number_format(get_field('product_gia_500', $prd->ID)).get_custom('product_unit');
                         }
                         ?></p>
                                     </div>
