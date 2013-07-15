@@ -67,8 +67,7 @@ if (isset($_POST['submit'])) {
                 <div class="descriptionprd">
                     <?php the_excerpt(); ?>
                 </div>
-                <div class="singleprice" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;">
-                    <p><?php if(get_field('product_gia_300', $post->ID)!='') echo 'Loại 350ml Giá '.  number_format(get_field('product_gia_300', $post->ID)).get_custom('product_unit'); ?></p>
+                <div class="singleprice" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $cat->term_id); ?>;">                    
                     <p><?php if(get_field('product_gia_500', $post->ID)!='') echo 'Loại 500ml Giá '.number_format(get_field('product_gia_500', $post->ID)).get_custom('product_unit'); ?></p>
                     <p><?php if(get_field('product_gia_1', $post->ID)!='') echo 'Loại 1L Giá '.number_format(get_field('product_gia_1', $post->ID)).get_custom('product_unit'); ?></p>
                 </div>
@@ -82,7 +81,6 @@ if (isset($_POST['submit'])) {
                             <td><label for="thetich0"><?php _e('THỂ TÍCH'); ?></td>
                             <td>
                                 <select name="thetich0" id="thetich0" >
-                                    <option value="350ml">350 ml</option>
                                     <option value="500ml">500 ml</option>
                                     <option value="1L">1 Lít</option>
 
@@ -107,8 +105,7 @@ if (isset($_POST['submit'])) {
                         <span class="close fr">X</span>
                         <div class="clr"></div>
                         <form id="frmorder" name="frmorder" action="" method="post" >
-                            <input type="hidden" name="link" value="<?php echo get_permalink($post->ID); ?>" />							
-                            <input type="hidden" name="price300" id="price300" value="<?php echo get_field('product_gia_300', $post->ID); ?>" />							
+                            <input type="hidden" name="link" value="<?php echo get_permalink($post->ID); ?>" />
                             <input type="hidden" name="price500" id="price500" value="<?php echo get_field('product_gia_500', $post->ID); ?>" />							
                             <input type="hidden" name="price1" id="price1" value="<?php echo get_field('product_gia_1', $post->ID); ?>" />							
                             <input type="hidden" name="priceunit" id="priceunit" value="<?php echo get_custom('product_unit'); ?>" />							

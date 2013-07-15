@@ -42,7 +42,7 @@ $tag = $wp_query->get_queried_object();
                                     <p><a style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $tag->term_id); ?>;" href="<?php echo get_permalink($prd->ID); ?>"><?php echo $prd->post_title; ?></a></p>
                                 </div>
                                 <div class="description">
-                                    <p class="price" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;"><?php  if( get_field('product_gia_300', $prd->ID)!='' ) {echo number_format(get_field('product_gia_300', $prd->ID)).get_custom('product_unit');} ?></p>
+                                    <p class="price" style="color: <?php echo get_field('wdrink_category_text_color', 'products_cat_' . $item->term_id); ?>;"><?php  if( get_field('product_gia_500', $prd->ID)!='' ) {echo number_format(get_field('product_gia_500', $prd->ID)).get_custom('product_unit');} ?></p>
                                 </div>
                             </li>
                         <?php } ?>
